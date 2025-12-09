@@ -2,7 +2,7 @@
   "name": "website",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://snoog1.gitlab.io/misha-website",
+  "homepage": "https://snoog1.github.io/misha-website",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
