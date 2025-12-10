@@ -1,4 +1,4 @@
-import type { Product, Recipe, ContactInfo, WhatsAppConfig } from '../types';
+import type { Product, Recipe, ContactInfo, WhatsAppConfig, FlashSale, Recommendation } from '../types';
 
 export const COMPANY_CONFIG = {
   name: "Misha Foodstuffs Limited",
@@ -330,5 +330,90 @@ export const COMPANY_CONFIG = {
     facebook: "https://facebook.com/mishafoodstuffs",
     instagram: "https://instagram.com/mishafoodstuffs",
     tiktok: "https://tiktok.com/@mishafoodstuffs"
-  }
+  },
+
+  // NEW: Flash Sales
+  flashSales: [
+    {
+      id: 'fs1',
+      productId: 'p0',
+      originalPrice: 'KES 1,200.',
+      salePrice: 'KES 999',
+      discountPercentage: 25,
+      endTime: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(),
+      quantity: 50,
+      sold: 32,
+    },
+    {
+      id: 'fs2',
+      productId: 'p3',
+      originalPrice: 'KES 1,150',
+      salePrice: 'KES 999',
+      discountPercentage: 23,
+      endTime: new Date(Date.now() + 12 * 60 * 60 * 1000).toISOString(),
+      quantity: 30,
+      sold: 25,
+    },
+    {
+      id: 'fs3',
+      productId: 'p5',
+      originalPrice: 'KES 1,300',
+      salePrice: 'KES 1,199',
+      discountPercentage: 27,
+      endTime: new Date(Date.now() + 48 * 60 * 60 * 1000).toISOString(),
+      quantity: 40,
+      sold: 12,
+    },
+	{
+      id: 'fs5',
+      productId: 'p11',
+      originalPrice: 'KES 350',
+      salePrice: 'KES 300',
+      discountPercentage: 27,
+      endTime: new Date(Date.now() + 48 * 60 * 60 * 1000).toISOString(),
+      quantity: 40,
+      sold: 34,
+    },
+  ] as FlashSale[],
+
+  // NEW: Recommendations
+  recommendations: [
+    {
+      id: 'rec1',
+      title: 'Complete Korean BBQ Set',
+      type: 'bundle' as const,
+      productIds: ['p0', 'p3', 'p5'],
+      description: 'Everything you need for authentic Korean BBQ at home',
+    },
+    {
+      id: 'rec2',
+      title: 'Kimchi Lovers Bundle',
+      type: 'frequently_bought' as const,
+      productIds: ['p1', 'p4', 'p6'],
+      description: 'Popular combination for kimchi enthusiasts',
+    },
+    {
+      id: 'rec3',
+      title: 'Ramen & Sides Combo',
+      type: 'complementary' as const,
+      productIds: ['p2', 'p7', 'p8'],
+      description: 'Perfect sides to enhance your ramen experience',
+    },
+    {
+      id: 'rec4',
+      title: 'Trending Korean Snacks',
+      type: 'trending' as const,
+      productIds: ['p9', 'p10', 'p11'],
+      description: 'Currently popular snacks from Korea',
+    },
+  ] as Recommendation[],
+
+  // NEW: Methods to access flash sales and recommendations
+  getFlashSales: function() {
+    return this.flashSales;
+  },
+
+  getRecommendations: function() {
+    return this.recommendations;
+  },
 };

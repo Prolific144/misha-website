@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Header } from '../components/Header';
 import { Hero } from '../components/Hero';
-import { ProductsSection } from '../components/ProductsSection';
+import { FlashSalesSection } from '../components/FlashSalesSection';
 import { CategoriesSection } from '../components/CategoriesSection';
-import { RecipesSection } from '../components/RecipesSection';
+import { ProductsSection } from '../components/ProductsSection';
+import { ProductRecommendations } from '../components/ProductRecommendations';
 import { WhyChooseUs } from '../components/WhyChooseUs';
+import { RecipesSection } from '../components/RecipesSection';
 import { AboutSection } from '../components/AboutSection';
 import { ContactSection } from '../components/ContactSection';
 import { CartSidebar } from '../components/CartSidebar';
@@ -12,6 +14,7 @@ import { Footer } from '../components/Footer';
 import { WhatsAppFloat } from '../components/WhatsAppFloat';
 import { useCart } from '../hooks/useCart';
 import { COMPANY_CONFIG } from '../utils/companyConfig';
+import { CookieConsent } from '../components/CookieConsent';
 
 export const HomePage: React.FC = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -43,6 +46,15 @@ export const HomePage: React.FC = () => {
           <Hero />
         </section>
         
+        {/* Flash Sales Section */}
+        <section id="flash-sales" className="py-8 bg-gradient-to-b from-red-50 to-white">
+          <FlashSalesSection
+            products={productsWithIds}
+            flashSales={COMPANY_CONFIG.getFlashSales()}
+            onAddToCart={addToCart}
+          />
+        </section>
+        
         <section id="categories" className="py-12">
           <CategoriesSection />
         </section>
@@ -50,6 +62,15 @@ export const HomePage: React.FC = () => {
         <section id="products" className="py-16 bg-gray-50">
           <ProductsSection
             products={productsWithIds}
+            onAddToCart={addToCart}
+          />
+        </section>
+        
+        {/* Product Recommendations Section */}
+        <section id="recommendations" className="py-8 bg-white">
+          <ProductRecommendations
+            products={productsWithIds}
+            recommendations={COMPANY_CONFIG.getRecommendations()}
             onAddToCart={addToCart}
           />
         </section>
@@ -85,6 +106,8 @@ export const HomePage: React.FC = () => {
         onRemoveItem={removeFromCart}
         totalPrice={totalPrice}
       />
+	{/* Add Cookie Consent */}
+    < CookieConsent />
     </div>
   );
 };

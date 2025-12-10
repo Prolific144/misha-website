@@ -1,3 +1,5 @@
+// Add to your existing types
+
 export interface Product {
   id: string;
   name: string;
@@ -31,4 +33,33 @@ export interface ContactInfo {
 export interface WhatsAppConfig {
   number: string;
   message: string;
+}
+
+export interface FlashSale {
+  id: string;
+  productId: string;
+  originalPrice: string;
+  salePrice: string;
+  discountPercentage: number;
+  endTime: string;
+  quantity: number;
+  sold: number;
+}
+
+export interface ProductBundle {
+  id: string;
+  name: string;
+  description: string;
+  products: Product[]; // Changed from string[] to Product[]
+  bundlePrice: string;
+  discount: number;
+  image?: string;
+}
+
+export interface Recommendation {
+  id: string;
+  title: string;
+  type: 'complementary' | 'frequently_bought' | 'trending' | 'bundle';
+  productIds: string[];
+  description: string;
 }
