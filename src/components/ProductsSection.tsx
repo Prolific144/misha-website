@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ShoppingCart, Star, Filter } from 'lucide-react';
-import type { Product } from '@/types'; // Clean alias (or use '../types' if no alias)
+import type { Product } from '../types'; // Changed from @/types to relative path
 
 interface ProductsSectionProps {
   products: Product[];

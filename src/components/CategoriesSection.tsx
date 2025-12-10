@@ -1,14 +1,11 @@
 import React from 'react';
-
 import { 
   ChefHat,
   Soup,
   Coffee,
   Candy,
   Wheat,
-  Wine as Bottle,
-  IceCream2 as IceCream,
-  Pizza 
+  Wine as Bottle
 } from 'lucide-react';
 
 const categories = [

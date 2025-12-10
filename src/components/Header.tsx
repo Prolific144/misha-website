@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShoppingCart, Menu, X, Phone, Mail, MapPin } from 'lucide-react';
+import { ShoppingCart, Menu, X } from 'lucide-react';
 import { COMPANY_CONFIG } from '../utils/companyConfig';
 import { MobileMenu } from './MobileMenu';
 
