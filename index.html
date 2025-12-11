@@ -40,3 +40,129 @@
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ==================== FAVICONS & APP ICONS ==================== -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#D32F2F" />
+
+    <!-- ==================== SEO & METADATA ==================== -->
+    <title>Misha Foodstuffs Limited | Authentic Korean Groceries in Nairobi, Kenya</title>
+    <meta
+      name="description"
+      content="Your trusted supplier for authentic Korean food in Nairobi: kimchi, ramen, gochujang, snacks, beverages & more. Free delivery above KES 2,000. Same-day delivery available!"
+    />
+    <link rel="canonical" href="https://mishafoodstuffs.com" />
+
+    <!-- ==================== OPEN GRAPH / FACEBOOK / WHATSAPP ==================== -->
+    <meta property="og:title" content="Misha Foodstuffs – Authentic Korean Groceries in Nairobi" />
+    <meta property="og:description" content="Fresh kimchi, instant ramen, sauces, snacks & beverages delivered same-day in Nairobi. Free delivery over KES 2,000!" />
+    <meta property="og:image" content="https://mishafoodstuffs.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://mishafoodstuffs.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Misha Foodstuffs Limited" />
+
+    <!-- ==================== TWITTER CARD ==================== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Misha Foodstuffs – Korean Groceries Nairobi" />
+    <meta name="twitter:description" content="Same-day delivery • Free over KES 2,000 • 100% Authentic Korean products" />
+    <meta name="twitter:image" content="https://mishafoodstuffs.com/og-image.jpg" />
+
+    <!-- ==================== THEME & UI ==================== -->
+    <meta name="theme-color" content="#D32F2F" />
+    <meta name="msapplication-TileColor" content="#D32F2F" />
+
+    <!-- ==================== PRECONNECT & PRELOAD (Speed!) ==================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+      rel="preload"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
+    <!-- ==================== STRUCTURED DATA (Google Rich Results) ==================== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Misha Foodstuffs Limited",
+      "image": "https://mishafoodstuffs.com/hero-korean-food.jpg",
+      "telephone": "+254797005509",
+      "email": "hello@mishafoodstuffs.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Samaki Drive, House No. 13",
+        "addressLocality": "Nairobi",
+        "addressCountry": "KE"
+      },
+      "url": "https://mishafoodstuffs.com",
+      "openingHours": "Mo-Fr 09:00-18:00, Sa 09:00-17:00",
+      "priceRange": "KES",
+      "sameAs": [
+        "https://facebook.com/mishafoodstuffs",
+        "https://instagram.com/mishafoodstuffs",
+        "https://tiktok.com/@mishafoodstuffs"
+      ]
+    }
+    </script>
+  </head>
+
+  <body class="bg-light antialiased">
+    <!-- Root -->
+    <div id="root"></div>
+
+    <!-- Vite Module Script -->
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Smooth Scroll Polyfill (works everywhere including Safari) -->
+    <script>
+      // Only run if browser doesn't support smooth scrolling natively
+      if ('scrollBehavior' in document.documentElement.style === false) {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+              target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          });
+        });
+      }
+    </script>
+
+    <script>
+      setTimeout(() => {
+        const waBtn = document.querySelector('a[href*="wa.me"]');
+        if (waBtn && !sessionStorage.getItem('waShown')) {
+          waBtn?.classList.add('animate-bounce');
+          sessionStorage.setItem('waShown', 'true');
+        }
+      }, 10000);
+    </script>
+
+  </body>
+</html>

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { ShoppingCart, Menu, X } from 'lucide-react';
+import { ShoppingCart, Menu, X, Moon, Sun } from 'lucide-react';
 import { COMPANY_CONFIG } from '../utils/companyConfig';
 import { MobileMenu } from './MobileMenu';
+import { SearchBar } from './SearchBar';
+import { useTheme } from '../context/ThemeContext';
 
 interface HeaderProps {
   cartItemsCount: number;
@@ -10,6 +12,7 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ cartItemsCount, onCartToggle }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   const navItems = [
     { label: 'Home', href: '#home' },
@@ -30,7 +33,7 @@ export const Header: React.FC<HeaderProps> = ({ cartItemsCount, onCartToggle }) 
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
+      <header className="sticky top-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
@@ -48,26 +51,34 @@ export const Header: React.FC<HeaderProps> = ({ cartItemsCount, onCartToggle }) 
                   key={item.label}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className="text-gray-700 hover:text-primary font-medium transition-colors"
+                  className="text-gray-700 dark:text-gray-300 hover:text-primary font-medium transition-colors"
                 >
                   {item.label}
                 </a>
               ))}
             </nav>
 
-            {/* Cart & Contact */}
-            <div className="flex items-center space-x-3">
+            {/* Right Side Actions */}
+            <div className="flex items-center space-x-4">
+              <SearchBar />
               <button
                 onClick={onCartToggle}
-                className="relative p-2 text-gray-700 hover:text-primary transition-colors"
-                aria-label="Shopping cart"
+                className="relative p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
               >
                 <ShoppingCart className="w-6 h-6" />
                 {cartItemsCount > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                  <span className="absolute -top-1 -right-1 bg-red-600 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">
                     {cartItemsCount}
                   </span>
                 )}
+              </button>
+              
+              <button
+                onClick={toggleTheme}
+                className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
+                aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+              >
+                {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
               </button>
 
               <a
@@ -85,7 +96,7 @@ export const Header: React.FC<HeaderProps> = ({ cartItemsCount, onCartToggle }) 
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100"
+                className="md:hidden p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
                 aria-label="Toggle menu"
               >
                 {isMobileMenuOpen ? (

@@ -1,0 +1,8 @@
+{
+  "name": "Misha Foodstuffs",
+  "short_name": "Misha Foodstuffs",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#D32F2F",
+  "background_color": "#ffffff"
+}

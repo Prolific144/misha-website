@@ -1,10 +1,20 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Heart } from 'lucide-react';
 import { COMPANY_CONFIG } from '../utils/companyConfig';
+import { NewsletterSignup } from './NewsletterSignup';
 
 export const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-dark text-white">
+      {/* Newsletter Section */}
+      <div className="bg-gray-900 dark:bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <NewsletterSignup />
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -19,13 +29,25 @@ export const Footer: React.FC = () => {
               Your trusted supplier of authentic Korean groceries in Kenya.
             </p>
             <div className="flex space-x-4">
-              <a href={COMPANY_CONFIG.socialMedia.facebook} className="hover:text-primary">
+              <a 
+                href={COMPANY_CONFIG.socialMedia.facebook} 
+                className="hover:text-primary transition-colors"
+                aria-label="Facebook"
+              >
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href={COMPANY_CONFIG.socialMedia.instagram} className="hover:text-primary">
+              <a 
+                href={COMPANY_CONFIG.socialMedia.instagram} 
+                className="hover:text-primary transition-colors"
+                aria-label="Instagram"
+              >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href={COMPANY_CONFIG.socialMedia.tiktok} className="hover:text-primary">
+              <a 
+                href={COMPANY_CONFIG.socialMedia.tiktok} 
+                className="hover:text-primary transition-colors"
+                aria-label="Twitter"
+              >
                 <Twitter className="w-5 h-5" />
               </a>
             </div>
@@ -57,11 +79,13 @@ export const Footer: React.FC = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="#home" className="text-gray-300 hover:text-primary">Home</a></li>
-              <li><a href="#products" className="text-gray-300 hover:text-primary">Products</a></li>
-              <li><a href="#recipes" className="text-gray-300 hover:text-primary">Recipes</a></li>
-              <li><a href="#about" className="text-gray-300 hover:text-primary">About Us</a></li>
-              <li><a href="#contact" className="text-gray-300 hover:text-primary">Contact</a></li>
+              <li><a href="#home" className="text-gray-300 hover:text-primary transition-colors">Home</a></li>
+              <li><a href="#products" className="text-gray-300 hover:text-primary transition-colors">Products</a></li>
+              <li><a href="#recipes" className="text-gray-300 hover:text-primary transition-colors">Recipes</a></li>
+              <li><a href="#about" className="text-gray-300 hover:text-primary transition-colors">About Us</a></li>
+              <li><a href="#contact" className="text-gray-300 hover:text-primary transition-colors">Contact</a></li>
+              <li><a href="#privacy-policy" className="text-gray-300 hover:text-primary transition-colors">Privacy Policy</a></li>
+              <li><a href="#cookie-policy" className="text-gray-300 hover:text-primary transition-colors">Cookie Policy</a></li>
             </ul>
           </div>
 
@@ -82,14 +106,56 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Copyright */}
+        {/* Accessibility & Copyright */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
-            © {new Date().getFullYear()} {COMPANY_CONFIG.name}. All rights reserved.
-          </p>
-          <p className="text-sm text-gray-500 mt-2">
-            Powered by SnooG Analytics | Designed for Misha Foodstuffs Kenya
-          </p>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="text-left">
+              <p className="text-gray-400 text-sm">
+                <button 
+                  className="hover:text-primary transition-colors"
+                  onClick={() => {
+                    document.documentElement.style.fontSize = '110%';
+                  }}
+                >
+                  Increase Text Size
+                </button>
+                {' • '}
+                <button 
+                  className="hover:text-primary transition-colors"
+                  onClick={() => {
+                    document.documentElement.style.fontSize = '100%';
+                  }}
+                >
+                  Reset Text Size
+                </button>
+                {' • '}
+                <button 
+                  className="hover:text-primary transition-colors"
+                  onClick={() => {
+                    document.documentElement.classList.toggle('high-contrast');
+                  }}
+                >
+                  High Contrast
+                </button>
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <p className="text-gray-400">
+                © {currentYear} {COMPANY_CONFIG.name}. All rights reserved.
+              </p>
+              <p className="text-sm text-gray-500 mt-2">
+                Made with <Heart className="w-3 h-3 inline text-red-400" /> by SnooG Analytics
+              </p>
+            </div>
+
+            <div className="text-right">
+              <p className="text-gray-400 text-sm">
+                {/* FIX: Use import.meta.env for Vite instead of process.env */}
+                v{import.meta.env.VITE_APP_VERSION || '1.0.0'}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
