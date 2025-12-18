@@ -36,16 +36,34 @@ export const NewsletterSignup: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-red-50 to-orange-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8">
+    <div 
+      className="rounded-2xl p-6 md:p-8 border"
+      style={{
+        background: 'linear-gradient(135deg, rgba(var(--color-surface-elevated), 0.8) 0%, rgba(var(--color-surface-elevated), 0.6) 100%)',
+        borderColor: 'rgb(var(--color-border))'
+      }}
+    >
       <div className="flex items-center mb-6">
-        <div className="p-3 bg-red-100 dark:bg-red-900/30 rounded-xl mr-4">
-          <Mail className="w-6 h-6 text-red-600 dark:text-red-400" />
+        <div 
+          className="p-3 rounded-xl mr-4"
+          style={{
+            backgroundColor: 'rgba(var(--color-primary), 0.1)',
+            color: 'rgb(var(--color-primary))'
+          }}
+        >
+          <Mail className="w-6 h-6" />
         </div>
         <div>
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+          <h3 
+            className="text-xl font-bold"
+            style={{ color: 'rgb(var(--color-on-surface))' }}
+          >
             Get Korean Cooking Tips & Deals
           </h3>
-          <p className="text-gray-600 dark:text-gray-400">
+          <p 
+            className="text-sm"
+            style={{ color: 'rgb(var(--color-on-surface-muted))' }}
+          >
             Subscribe to our newsletter for recipes, promotions, and new arrivals
           </p>
         </div>
@@ -58,18 +76,24 @@ export const NewsletterSignup: React.FC = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Your email address"
-            className="flex-1 px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-500 dark:focus:ring-red-600 dark:text-white"
+            className="input-primary flex-1"
             disabled={status === 'loading' || status === 'success'}
             aria-label="Email address for newsletter"
+            style={{
+              backgroundColor: 'rgba(var(--color-surface-elevated), 0.5)',
+              color: 'rgb(var(--color-on-surface))'
+            }}
           />
           <button
             type="submit"
             disabled={status === 'loading' || status === 'success'}
-            className={`px-6 py-3 rounded-xl font-semibold flex items-center justify-center min-w-[140px] transition-all ${
-              status === 'success'
-                ? 'bg-green-600 text-white'
-                : 'bg-red-600 hover:bg-red-700 text-white'
-            } ${status === 'loading' ? 'opacity-70 cursor-not-allowed' : ''}`}
+            className={`btn ${status === 'loading' ? 'btn-loading' : ''} ${status === 'success' ? 'btn-success' : ''} hover-lift`}
+            style={{
+              backgroundColor: status === 'success' 
+                ? 'rgb(var(--color-success))' 
+                : 'rgb(var(--color-primary))',
+              color: 'white'
+            }}
           >
             {status === 'loading' ? (
               <>
@@ -92,17 +116,24 @@ export const NewsletterSignup: React.FC = () => {
 
         {message && (
           <div
-            className={`p-3 rounded-lg text-sm ${
-              status === 'success'
-                ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400'
-                : 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400'
-            }`}
+            className="p-3 rounded-lg text-sm"
+            style={{
+              backgroundColor: status === 'success' 
+                ? 'rgba(var(--color-success), 0.1)' 
+                : 'rgba(var(--color-error), 0.1)',
+              color: status === 'success' 
+                ? 'rgb(var(--color-success))' 
+                : 'rgb(var(--color-error))'
+            }}
           >
             {message}
           </div>
         )}
 
-        <p className="text-xs text-gray-500 dark:text-gray-400">
+        <p 
+          className="text-xs"
+          style={{ color: 'rgb(var(--color-on-surface-muted))' }}
+        >
           By subscribing, you agree to our Privacy Policy. Unsubscribe anytime.
         </p>
       </form>

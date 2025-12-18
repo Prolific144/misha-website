@@ -1,17 +1,32 @@
+// src/hooks/useWishlist.ts
 import { useState, useEffect } from 'react';
-import type { Product } from '../types';
+import { PRODUCTS, getProductById } from '@/config/products';
 
-export const useWishlist = () => {
+export interface UseWishlistReturn {
+  wishlist: Product[];
+  addToWishlist: (product: Product) => void;
+  removeFromWishlist: (productId: string) => void;
+  isInWishlist: (productId: string) => boolean;
+  toggleWishlist: (product: Product) => void;
+  wishlistCount: number;
+  clearWishlist: () => void;
+}
+
+export const useWishlist = (): UseWishlistReturn => {
   const [wishlist, setWishlist] = useState<Product[]>([]);
   const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
-    const saved = localStorage.getItem('wishlist');
+    const saved = localStorage.getItem('misha_foodstuffs_wishlist');
     if (saved) {
       try {
-        setWishlist(JSON.parse(saved));
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed)) {
+          setWishlist(parsed);
+        }
       } catch (e) {
         console.error('Failed to parse wishlist:', e);
+        localStorage.removeItem('misha_foodstuffs_wishlist');
       }
     }
     setIsInitialized(true);
@@ -19,7 +34,7 @@ export const useWishlist = () => {
 
   useEffect(() => {
     if (isInitialized) {
-      localStorage.setItem('wishlist', JSON.stringify(wishlist));
+      localStorage.setItem('misha_foodstuffs_wishlist', JSON.stringify(wishlist));
     }
   }, [wishlist, isInitialized]);
 
@@ -48,6 +63,11 @@ export const useWishlist = () => {
     }
   };
 
+  const clearWishlist = () => {
+    setWishlist([]);
+    localStorage.removeItem('misha_foodstuffs_wishlist');
+  };
+
   return {
     wishlist,
     addToWishlist,
@@ -55,5 +75,6 @@ export const useWishlist = () => {
     isInWishlist,
     toggleWishlist,
     wishlistCount: wishlist.length,
+    clearWishlist,
   };
 };

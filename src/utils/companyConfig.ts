@@ -1,4 +1,4 @@
-import type { Product, Recipe, ContactInfo, WhatsAppConfig, FlashSale, Recommendation } from '../types';
+import type { Product, Recipe, ContactInfo, WhatsAppConfig, FlashSale, Recommendation } from '@/types';
 
 export const COMPANY_CONFIG = {
   name: "Misha Foodstuffs Limited",

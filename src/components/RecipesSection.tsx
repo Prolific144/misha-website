@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import type { Recipe } from '../types';
+import type { Recipe } from '@types';
 import { ChefHat, Clock, Users, Flame } from 'lucide-react';
 
 interface RecipesSectionProps {

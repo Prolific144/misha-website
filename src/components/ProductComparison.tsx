@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { X, Scale, Check, X as XIcon } from 'lucide-react';
-import type { Product } from '../types';
+import { X, Scale, Check } from 'lucide-react';
+import type { Product } from '@/types';
 
 interface ProductComparisonProps {
   isOpen: boolean;
@@ -59,7 +59,7 @@ export const ProductComparison: React.FC<ProductComparisonProps> = ({
               </div>
               <button
                 onClick={onClose}
-                className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full"
+                className="btn-ghost p-2 rounded-full"
               >
                 <X className="w-6 h-6" />
               </button>
@@ -78,11 +78,7 @@ export const ProductComparison: React.FC<ProductComparisonProps> = ({
                   <button
                     key={product.id}
                     onClick={() => toggleProduct(product)}
-                    className={`p-4 rounded-xl border-2 transition-all ${
-                      isSelected
-                        ? 'border-red-500 dark:border-red-400 bg-red-50 dark:bg-red-900/20'
-                        : 'border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600'
-                    }`}
+                    className={`card-minimal p-4 ${isSelected ? 'border-2 border-red-500 dark:border-red-400' : ''}`}
                   >
                     <div className="text-center">
                       <div className="h-12 w-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-lg flex items-center justify-center mx-auto mb-3">
@@ -155,7 +151,7 @@ export const ProductComparison: React.FC<ProductComparisonProps> = ({
                               // Add to cart logic here
                               console.log('Add to cart:', product);
                             }}
-                            className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm"
+                            className="btn-primary px-4 py-2 text-sm"
                           >
                             Add to Cart
                           </button>
@@ -173,7 +169,7 @@ export const ProductComparison: React.FC<ProductComparisonProps> = ({
             <div className="flex justify-between items-center">
               <button
                 onClick={() => setSelectedProducts([])}
-                className="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
+                className="btn-outline px-4 py-2"
                 disabled={selectedProducts.length === 0}
               >
                 Clear All
@@ -181,12 +177,12 @@ export const ProductComparison: React.FC<ProductComparisonProps> = ({
               <div className="flex gap-3">
                 <button
                   onClick={onClose}
-                  className="px-6 py-2 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-semibold hover:bg-gray-50 dark:hover:bg-gray-800"
+                  className="btn-secondary px-6 py-2"
                 >
                   Close
                 </button>
                 {selectedProducts.length > 0 && (
-                  <button className="px-6 py-2 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700">
+                  <button className="btn-primary px-6 py-2">
                     Add All to Cart
                   </button>
                 )}

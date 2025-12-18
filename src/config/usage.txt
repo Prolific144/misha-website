@@ -1,0 +1,8 @@
+// Import specific configs
+import { PRODUCTS, getFeaturedProducts } from '@/config/products';
+import { BUSINESS_HOURS, isBusinessOpen } from '@/config/business';
+import { calculateDeliveryFee } from '@/config/delivery';
+
+// Or import everything from main index
+import { COMPANY_CONFIG } from '@/config';
+import { generateWhatsAppUrl } from '@/utils/helpers';

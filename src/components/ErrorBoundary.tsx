@@ -1,6 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-import { COMPANY_CONFIG } from '../utils/companyConfig';
+import { COMPANY_CONFIG } from '@utils/companyConfig';
 
 interface Props {
   children: ReactNode;

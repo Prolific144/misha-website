@@ -29,7 +29,7 @@ export const BackToTop: React.FC = () => {
   return (
     <button
       onClick={scrollToTop}
-      className="fixed bottom-24 right-6 z-40 p-3 bg-red-600 text-white rounded-full shadow-2xl hover:bg-red-700 hover:shadow-3xl transition-all duration-300"
+      className="fixed bottom-24 right-6 z-40 btn-primary p-3 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300"
       aria-label="Back to top"
     >
       <ChevronUp className="w-5 h-5" />
