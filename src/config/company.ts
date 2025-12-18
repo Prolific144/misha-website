@@ -21,6 +21,6 @@ export const WHATSAPP_CONFIG = {
 
 export const SOCIAL_MEDIA = {
   facebook: "https://facebook.com/mishafoodstuffs",
-  instagram: "https://instagram.com/mishafoodstuffs",
+  instagram: "https://instagram.com/songhunfoodstuffslt",
   tiktok: "https://tiktok.com/@mishafoodstuffs"
 } as const;
