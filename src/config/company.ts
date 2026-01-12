@@ -10,12 +10,12 @@ export const CONTACT_INFO = {
     line1: "Samaki Drive Hse Number 13",
     line2: "Nairobi, Kenya"
   },
-  phone: "+254 797 005509",
+  phone: "+254 716 801884",
   email: "songhunfoodstuffsltd@gmail.com"
 } as const;
 
 export const WHATSAPP_CONFIG = {
-  number: "+254797005509",
+  number: "+254716801884",
   defaultMessage: "Hello! I'd like to place an order from Misha Foodstuffs."
 } as const;
 

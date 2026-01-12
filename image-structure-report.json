@@ -1,0 +1,446 @@
+{
+  "generatedAt": "2026-01-12T08:10:23.290Z",
+  "categories": {
+    "kimchi": {
+      "directoryExists": true,
+      "files": [
+        {
+          "name": "aged-kimchi.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.568Z"
+        },
+        {
+          "name": "cucumber-kimchi.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.578Z"
+        },
+        {
+          "name": "cucumber-kimchi.png",
+          "size": 116112,
+          "modified": "2026-01-12T08:07:10.339Z"
+        },
+        {
+          "name": "default.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.566Z"
+        },
+        {
+          "name": "default.png",
+          "size": 202517,
+          "modified": "2026-01-12T08:07:33.796Z"
+        },
+        {
+          "name": "mustard-kimchi.jpg",
+          "size": 143284,
+          "modified": "2026-01-12T08:07:17.297Z"
+        },
+        {
+          "name": "mustard-kimchi.png",
+          "size": 119745,
+          "modified": "2026-01-12T08:07:25.660Z"
+        },
+        {
+          "name": "nabak-kimchi.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.590Z"
+        },
+        {
+          "name": "radish-kimchi.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.569Z"
+        },
+        {
+          "name": "small-kimchi.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.572Z"
+        },
+        {
+          "name": "spring-onion-kimchi.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.582Z"
+        },
+        {
+          "name": "water-kimchi.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.581Z"
+        },
+        {
+          "name": "white-kimchi.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.576Z"
+        },
+        {
+          "name": "wrapped-kimchi.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.587Z"
+        }
+      ]
+    },
+    "ramen": {
+      "directoryExists": true,
+      "files": [
+        {
+          "name": "bibim-men.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.606Z"
+        },
+        {
+          "name": "buldak-mild.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.617Z"
+        },
+        {
+          "name": "buldak-ramen.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.601Z"
+        },
+        {
+          "name": "chapagetti.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.614Z"
+        },
+        {
+          "name": "cheese-buldak-ramen.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.612Z"
+        },
+        {
+          "name": "default.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.596Z"
+        },
+        {
+          "name": "jin-ramyun.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.600Z"
+        },
+        {
+          "name": "neoguri-ramen.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.603Z"
+        },
+        {
+          "name": "ottogi-ramen.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.610Z"
+        },
+        {
+          "name": "shin Ramyun Noodle Soup.png",
+          "size": 1259812,
+          "modified": "2026-01-12T08:07:49.913Z"
+        },
+        {
+          "name": "shin-ramyun.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.597Z"
+        }
+      ]
+    },
+    "sauces": {
+      "directoryExists": true,
+      "files": [
+        {
+          "name": "bibimbap-sauce.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.638Z"
+        },
+        {
+          "name": "bulgogi-marinade.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.643Z"
+        },
+        {
+          "name": "default.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.621Z"
+        },
+        {
+          "name": "doenjang.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.627Z"
+        },
+        {
+          "name": "gochugaru.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.636Z"
+        },
+        {
+          "name": "gochujang.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.625Z"
+        },
+        {
+          "name": "perilla-oil.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.646Z"
+        },
+        {
+          "name": "sesame-oil.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.634Z"
+        },
+        {
+          "name": "soy-sauce.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.632Z"
+        },
+        {
+          "name": "ssamjang.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.630Z"
+        },
+        {
+          "name": "yakult-gochujang.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.645Z"
+        }
+      ]
+    },
+    "snacks": {
+      "directoryExists": true,
+      "files": [
+        {
+          "name": "cheetos.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.664Z"
+        },
+        {
+          "name": "choco-pie.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.654Z"
+        },
+        {
+          "name": "default.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.651Z"
+        },
+        {
+          "name": "default.png",
+          "size": 354114,
+          "modified": "2026-01-12T08:07:58.713Z"
+        },
+        {
+          "name": "honey-butter-chips.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.656Z"
+        },
+        {
+          "name": "pepero.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.663Z"
+        },
+        {
+          "name": "shrimp-crackers.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.660Z"
+        }
+      ]
+    },
+    "beverages": {
+      "directoryExists": true,
+      "files": [
+        {
+          "name": "cass-beer.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.679Z"
+        },
+        {
+          "name": "default.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.669Z"
+        },
+        {
+          "name": "makkoli.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.672Z"
+        },
+        {
+          "name": "soju.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.676Z"
+        }
+      ]
+    },
+    "essentials": {
+      "directoryExists": true,
+      "files": [
+        {
+          "name": "default.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.685Z"
+        },
+        {
+          "name": "glass-noodles.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.689Z"
+        },
+        {
+          "name": "pancake-mix.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.693Z"
+        },
+        {
+          "name": "rice-cake.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.686Z"
+        }
+      ]
+    },
+    "seafood": {
+      "directoryExists": true,
+      "files": [
+        {
+          "name": "anchovies.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.701Z"
+        },
+        {
+          "name": "default.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.697Z"
+        },
+        {
+          "name": "dried-squid.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.705Z"
+        },
+        {
+          "name": "seaweed.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.703Z"
+        }
+      ]
+    },
+    "grains": {
+      "directoryExists": true,
+      "files": [
+        {
+          "name": "default.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.712Z"
+        },
+        {
+          "name": "mixed-grains.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.716Z"
+        },
+        {
+          "name": "rice.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.713Z"
+        },
+        {
+          "name": "sweet-potato-noodles.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.719Z"
+        }
+      ]
+    },
+    "frozen": {
+      "directoryExists": true,
+      "files": [
+        {
+          "name": "default.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.725Z"
+        },
+        {
+          "name": "dumplings.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.728Z"
+        },
+        {
+          "name": "pajeon.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.731Z"
+        },
+        {
+          "name": "tteokbokki-set.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.730Z"
+        }
+      ]
+    },
+    "health": {
+      "directoryExists": true,
+      "files": [
+        {
+          "name": "barley-tea.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.742Z"
+        },
+        {
+          "name": "default.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.736Z"
+        },
+        {
+          "name": "omija-tea.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.745Z"
+        },
+        {
+          "name": "red-ginseng.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.739Z"
+        }
+      ]
+    },
+    "desserts": {
+      "directoryExists": true,
+      "files": [
+        {
+          "name": "default.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.750Z"
+        },
+        {
+          "name": "hotteok-mix.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.753Z"
+        },
+        {
+          "name": "patbingsoo.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.756Z"
+        },
+        {
+          "name": "songpyeon.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.752Z"
+        }
+      ]
+    },
+    "specialty": {
+      "directoryExists": true,
+      "files": [
+        {
+          "name": "bbq-set.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.769Z"
+        },
+        {
+          "name": "default.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.765Z"
+        },
+        {
+          "name": "royal-cuisine.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.767Z"
+        },
+        {
+          "name": "tea-ceremony.jpg",
+          "size": 0,
+          "modified": "2026-01-12T08:07:02.775Z"
+        }
+      ]
+    }
+  },
+  "summary": {
+    "totalCategories": 12,
+    "totalFiles": 75,
+    "expectedFiles": 73,
+    "allFilesPresent": true
+  }
+}

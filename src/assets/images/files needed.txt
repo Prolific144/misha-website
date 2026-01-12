@@ -1,0 +1,185 @@
+Based on the updated configuration files, here's the complete list of image files you need in your `src/assets/images/products/` directory:
+
+## **Required Directory Structure**
+```
+src/assets/images/products/
+├── kimchi/
+├── ramen/
+├── sauces/
+├── snacks/
+├── beverages/
+├── essentials/
+├── seafood/
+├── grains/
+├── frozen/
+├── health/
+├── desserts/
+└── specialty/
+```
+
+## **Required Image Files by Category**
+
+### **1. Kimchi Category** (10 images + 1 default)
+```
+kimchi/
+├── aged-kimchi.jpg              (for kimchi-001)
+├── radish-kimchi.jpg            (for kimchi-002)
+├── small-kimchi.jpg             (for kimchi-003)
+├── white-kimchi.jpg             (for kimchi-004)
+├── cucumber-kimchi.jpg          (for kimchi-005)
+├── water-kimchi.jpg             (for kimchi-006)
+├── spring-onion-kimchi.jpg      (for kimchi-007)
+├── mustard-kimchi.jpg           (for kimchi-008)
+├── wrapped-kimchi.jpg           (for kimchi-009)
+├── nabak-kimchi.jpg             (for kimchi-010)
+└── default.jpg                  (fallback for kimchi category)
+```
+
+### **2. Ramen Category** (9 images + 1 default)
+```
+ramen/
+├── shin-ramyun.jpg              (for ramen-001)
+├── jin-ramyun.jpg               (for ramen-002)
+├── buldak-ramen.jpg             (for ramen-003)
+├── neoguri-ramen.jpg            (for ramen-004)
+├── bibim-men.jpg                (for ramen-005)
+├── ottogi-ramen.jpg             (for ramen-006)
+├── cheese-buldak-ramen.jpg      (for ramen-007)
+├── chapagetti.jpg               (for ramen-008)
+├── buldak-mild.jpg              (for ramen-009)
+└── default.jpg                  (fallback for ramen category)
+```
+
+### **3. Sauces Category** (10 images + 1 default)
+```
+sauces/
+├── gochujang.jpg                (for sauce-001)
+├── doenjang.jpg                 (for sauce-002)
+├── ssamjang.jpg                 (for sauce-003)
+├── soy-sauce.jpg                (for sauce-004)
+├── sesame-oil.jpg               (for sauce-005)
+├── gochugaru.jpg                (for sauce-006)
+├── bibimbap-sauce.jpg           (for sauce-007)
+├── bulgogi-marinade.jpg         (for sauce-008)
+├── yakult-gochujang.jpg         (for sauce-009)
+├── perilla-oil.jpg              (for sauce-010)
+└── default.jpg                  (fallback for sauces category)
+```
+
+### **4. Snacks Category** (5 images + 1 default)
+```
+snacks/
+├── choco-pie.jpg                (for snack-001)
+├── honey-butter-chips.jpg       (for snack-002)
+├── shrimp-crackers.jpg          (for snack-003)
+├── pepero.jpg                   (for snack-004)
+├── cheetos.jpg                  (for snack-005)
+└── default.jpg                  (fallback for snacks category)
+```
+
+### **5. Beverages Category** (3 images + 1 default)
+```
+beverages/
+├── makkoli.jpg                  (for beverage-001)
+├── soju.jpg                     (for beverage-002)
+├── cass-beer.jpg                (for beverage-003)
+└── default.jpg                  (fallback for beverages category)
+```
+
+### **6. Essentials Category** (3 images + 1 default)
+```
+essentials/
+├── rice-cake.jpg                (for essential-001)
+├── glass-noodles.jpg            (for essential-002)
+├── pancake-mix.jpg              (for essential-003)
+└── default.jpg                  (fallback for essentials category)
+```
+
+### **7. Seafood Category** (3 images + 1 default)
+```
+seafood/
+├── anchovies.jpg                (for seafood-001)
+├── seaweed.jpg                  (for seafood-002)
+├── dried-squid.jpg              (for seafood-003)
+└── default.jpg                  (fallback for seafood category)
+```
+
+### **8. Grains Category** (3 images + 1 default)
+```
+grains/
+├── rice.jpg                     (for grain-001)
+├── mixed-grains.jpg             (for grain-002)
+├── sweet-potato-noodles.jpg     (for grain-003)
+└── default.jpg                  (fallback for grains category)
+```
+
+### **9. Frozen Category** (3 images + 1 default)
+```
+frozen/
+├── dumplings.jpg                (for frozen-001)
+├── tteokbokki-set.jpg          (for frozen-002)
+├── pajeon.jpg                   (for frozen-003)
+└── default.jpg                  (fallback for frozen category)
+```
+
+### **10. Health Category** (3 images + 1 default)
+```
+health/
+├── red-ginseng.jpg              (for health-001)
+├── barley-tea.jpg               (for health-002)
+├── omija-tea.jpg                (for health-003)
+└── default.jpg                  (fallback for health category)
+```
+
+### **11. Desserts Category** (3 images + 1 default)
+```
+desserts/
+├── songpyeon.jpg                (for dessert-001)
+├── hotteok-mix.jpg              (for dessert-002)
+├── patbingsoo.jpg               (for dessert-003)
+└── default.jpg                  (fallback for desserts category)
+```
+
+### **12. Specialty Category** (3 images + 1 default)
+```
+specialty/
+├── royal-cuisine.jpg            (for specialty-001)
+├── bbq-set.jpg                  (for specialty-002)
+├── tea-ceremony.jpg             (for specialty-003)
+└── default.jpg                  (fallback for specialty category)
+```
+
+## **Image Requirements**
+- **Format**: JPEG recommended (optimized for web)
+- **Resolution**: Minimum 600×400 pixels (1.5:1 aspect ratio)
+- **File naming**: Use lowercase with hyphens (e.g., `aged-kimchi.jpg`)
+- **File size**: Aim for 100-300KB per image
+- **Consistency**: Try to maintain consistent lighting and style across images
+
+## **Total Count**
+- **Category folders**: 12 folders
+- **Product images**: 61 images (for specific products)
+- **Default images**: 12 images (one per category)
+- **Total images needed**: 73 images
+
+## **Quick Checklist of All Files**
+```bash
+# Verify you have all these files
+find src/assets/images/products -type f -name "*.jpg" | wc -l
+# Should return 73
+```
+
+## **Image Source Suggestions**
+You can find suitable Korean food images from:
+1. **Unsplash** (free, high-quality)
+2. **Pexels** (free stock photos)
+3. **Food photography websites**
+4. **Actual product photos** (if you have the products)
+
+## **Alternative Approach**
+If you don't want to create all 73 images immediately, you can:
+1. Start with featured products only (about 20 images)
+2. Use the Unsplash fallbacks for non-featured products
+3. Add local images gradually as your site grows
+
+The system will automatically use Unsplash images for any missing local files, so your site will work even with just the default category images.
